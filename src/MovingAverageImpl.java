@@ -26,7 +26,7 @@ class MovingAverageImpl implements MovingAverage<Double>{
         queue.offer(val);
         list.add(val);
         sum+=val;
-        if(queue.size()>size){
+        if(queue.size()>size){ // size is more than n, queue will pop a value, sum will reduce this value
             double num = queue.poll();
             sum-=num;
         }
